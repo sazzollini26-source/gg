@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-token" content="__CSRF_TOKEN__">
+  <meta name="theme-color" content="#173f35">
+  <title>DayDesk · Your day, in order</title>
+  <style nonce="__CSP_NONCE__">
+    :root{--paper:#f6f4ec;--surface:#fffef9;--green:#173f35;--green-soft:#e6eee7;--ink:#1d342c;--muted:#677469;--line:#e1e5d9;--coral:#d96951;--coral-soft:#fff0e9;--gold:#bc8d39;--shadow:0 8px 28px #18362b08;--radius:20px}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:wait;opacity:.55}button,input,select,textarea{outline-offset:4px}button:focus-visible,a:focus-visible{outline:3px solid var(--coral)}.shell{display:grid;grid-template-columns:228px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--green);color:#f5f5e9;padding:32px 22px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{font:600 29px/1.2 Georgia,serif;letter-spacing:-1px}.brand-mark{display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid #87a995;border-radius:9px;font:18px sans-serif;margin-right:9px;color:#d5e5c9}.tagline{font-size:12px;color:#adbfac;margin:9px 0 35px 43px}.navigation{display:grid;gap:7px}.nav{border:0;border-radius:12px;color:#b7c8b7;background:transparent;display:flex;align-items:center;text-align:left;gap:13px;padding:13px 15px;font-weight:500}.nav.active{color:var(--green);background:#eff3e4}.nav-icon{width:20px;text-align:center;font-size:18px}.sidebar-foot{margin-top:auto;padding-top:36px;font-size:12px;color:#b5c6b6}.local-mark{display:flex;gap:8px;align-items:center}.dot{width:7px;height:7px;border-radius:50%;background:#a9c990}.sidebar-foot p{line-height:1.7}.sidebar-foot .footer-link{background:transparent;border:0;color:#d5e5c9;padding:0;text-align:left;font-size:12px;text-decoration:underline;text-underline-offset:3px}.main{padding:38px 44px 50px;max-width:1510px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:start;gap:20px;margin-bottom:28px}.eyebrow{text-transform:uppercase;letter-spacing:1.7px;font-size:10px;font-weight:700;color:var(--muted);margin:0 0 9px}h1{font:400 clamp(30px,3.2vw,43px)/1.2 Georgia,serif;letter-spacing:-1.2px;margin:0 0 9px}h2{font:400 25px/1.25 Georgia,serif;letter-spacing:-.35px;margin:0}h3{font-size:14px;line-height:1.4;margin:0;font-weight:650}.subtitle{color:var(--muted);margin:0;max-width:620px}.top-actions{display:flex;gap:10px;align-items:center;padding-top:4px;flex-wrap:wrap;justify-content:flex-end}.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 15px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:41px}.btn:hover{border-color:#b7cbb9}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn.coral{background:var(--coral);color:white;border-color:var(--coral)}.btn.small{padding:7px 11px;font-size:12px;min-height:34px}.btn.ghost{background:transparent}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:25px}.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 21px}.stat-label{color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:6px}.stat-value{font-size:28px;font-weight:500;line-height:1.2;margin:10px 0 5px;letter-spacing:-1px}.stat-detail{font-size:11px;color:var(--muted)}.content-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(290px,1fr);gap:22px;align-items:start}.column{display:grid;gap:22px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.card-head p{margin:5px 0 0;font-size:12px;color:var(--muted)}.pill{display:inline-flex;align-items:center;border-radius:20px;padding:3px 9px;font-size:10px;font-weight:650;letter-spacing:.2px;background:var(--green-soft);color:var(--green);white-space:nowrap}.pill.urgent{background:var(--coral-soft);color:#ad4e35}.pill.done{background:#f0f1ea;color:var(--muted)}.task-row{display:flex;gap:12px;padding:15px 0;border-top:1px solid var(--line);align-items:start}.task-row:first-child{border-top:0;padding-top:0}.task-row:last-child{padding-bottom:0}.check{appearance:none;display:grid;place-items:center;width:21px;height:21px;border:1.5px solid #bdcabb;border-radius:7px;background:var(--surface);flex:0 0 21px;margin:2px 0 0;cursor:pointer}.check:checked{background:var(--green);border-color:var(--green)}.check:checked:after{content:"✓";color:white;font-size:13px}.check:disabled{cursor:default}.task-main{flex:1;min-width:0}.task-title{font-size:14px;font-weight:550;overflow-wrap:anywhere}.task-row.completed .task-title{text-decoration:line-through;color:var(--muted)}.task-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:11px;margin-top:5px}.record-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.text-action{padding:0;background:transparent;border:0;color:var(--muted);font-size:11px;text-decoration:underline;text-underline-offset:3px}.text-action:hover{color:var(--green)}.text-action.danger:hover{color:#ad4e35}.task-notes{font-size:12px;color:var(--muted);white-space:pre-wrap;margin:7px 0 0;overflow-wrap:anywhere}.empty{padding:28px 12px 22px;text-align:center;color:var(--muted);font-size:13px}.empty-symbol{font:31px Georgia,serif;color:#9eaf99;margin-bottom:9px}.empty strong{display:block;color:var(--ink);font-size:14px;font-weight:600;margin-bottom:4px}.empty p{margin:0 auto;max-width:325px}.empty .btn{margin-top:16px}.calendar-item{border-left:3px solid #b8cbb8;padding:2px 0 2px 13px;margin:19px 0}.calendar-item:first-child{margin-top:0}.calendar-item:last-child{margin-bottom:0}.calendar-item.soon{border-color:var(--coral)}.event-time{font-size:11px;color:var(--muted);margin-bottom:4px}.event-title{font-size:14px;font-weight:600;overflow-wrap:anywhere}.event-location{font-size:12px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}.routine{background:var(--green-soft);border-color:#d8e3d7}.routine p{font-size:13px;color:#4c6350;margin:10px 0 18px}.routine label{font-size:11px}.routine-controls{display:flex;gap:9px}.routine-controls select{flex:1;min-width:0;background:var(--surface)}.note-card{background:var(--coral-soft);border-color:#f0dbcd}.note-card p{font-size:13px;color:#865a48;margin:9px 0 0}.section[hidden]{display:none}.section-title{margin-bottom:23px}.section-title p{margin:7px 0 0;color:var(--muted)}.two-column{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(300px,1fr);gap:22px;align-items:start}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:600;color:#526252}input,select,textarea{width:100%;min-width:0;border:1px solid #d6dece;border-radius:9px;background:white;color:var(--ink);padding:10px 11px;font-size:13px;min-height:42px}textarea{resize:vertical;min-height:75px}input:focus,select:focus,textarea:focus{border-color:#799a7a}.form-footer{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:18px}.form-footer p,.hint{font-size:11px;color:var(--muted);margin:0}.form-footer p{max-width:230px}.filters{display:flex;gap:6px;flex-wrap:wrap}.filter{border:1px solid transparent;background:transparent;color:var(--muted);border-radius:7px;padding:5px 10px;font-size:12px}.filter.active{background:var(--green-soft);color:var(--green)}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;text-align:left}th{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:650;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:13px 10px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}tr:last-child td{border-bottom:0}td.amount,th.amount{text-align:right;white-space:nowrap}td small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.inline-stats{display:flex;gap:35px;flex-wrap:wrap;margin:0 0 21px;padding-bottom:20px;border-bottom:1px solid var(--line)}.inline-stats span{font-size:11px;color:var(--muted)}.inline-stats strong{display:block;font-size:25px;font-weight:500;color:var(--ink);margin-top:4px}.settings-stack{display:grid;gap:22px}.tool-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 0;border-top:1px solid var(--line)}.tool-row:first-of-type{border-top:0}.tool-row p{font-size:12px;color:var(--muted);margin:4px 0 0;max-width:330px}.status-strip{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-bottom:20px}.status-strip .dot{background:#809d6c}.status-strip.error{color:#aa4431}.status-strip.error .dot{background:var(--coral)}.toast-stack{position:fixed;right:22px;bottom:22px;z-index:20;display:grid;gap:10px;max-width:min(420px,calc(100vw - 44px))}.toast{background:var(--green);color:#fff;padding:14px 17px;border-radius:12px;box-shadow:0 8px 30px #18362b30;font-size:13px;overflow-wrap:anywhere;display:flex;gap:14px;align-items:start}.toast.error{background:#a74836}.toast button{background:transparent;border:0;color:inherit;font-size:19px;line-height:1;cursor:pointer}.toast span{flex:1}dialog{border:1px solid var(--line);border-radius:20px;padding:27px;background:var(--surface);color:var(--ink);width:min(720px,calc(100% - 32px));max-height:85vh;box-shadow:0 25px 100px #14332a40}dialog::backdrop{background:#173f355e;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.brief-content{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;margin:0}.mobile-brand{display:none}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.divider{height:1px;background:var(--line);margin:20px 0}.welcome{margin-top:15px;font-size:12px;line-height:1.65;color:var(--muted)}
+    @media(max-width:1150px){.main{padding:30px 28px}.sidebar{padding:30px 17px}.shell{grid-template-columns:205px 1fr}.stats{gap:10px}.stat{padding:17px}.content-grid,.two-column{grid-template-columns:minmax(0,1.25fr) minmax(280px,1fr)}}
+    @media(max-width:950px){.shell{grid-template-columns:80px 1fr}.sidebar{padding:25px 13px}.brand{font-size:0}.brand-mark{margin:0;width:44px;height:44px;font-size:24px}.tagline,.nav-label,.sidebar-foot{display:none}.navigation{margin-top:35px}.nav{padding:13px;justify-content:center}.nav-icon{font-size:21px}.topbar{flex-direction:column;gap:15px}.top-actions{justify-content:flex-start}.content-grid,.two-column{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.shell{display:block}.sidebar{position:fixed;top:auto;bottom:0;left:0;right:0;height:auto;padding:8px 9px 11px;z-index:10;border-top:1px solid #ffffff1a}.sidebar .brand{display:none}.navigation{display:flex;justify-content:space-around;margin:0;gap:3px}.nav{flex:1;display:grid;justify-items:center;gap:3px;padding:7px 2px;border-radius:8px}.nav-label{display:block;font-size:9px}.nav-icon{font-size:17px;line-height:1.1}.main{padding:25px 19px 104px}.mobile-brand{display:block;font:600 21px Georgia,serif;color:var(--green);margin-bottom:24px}.topbar{margin-bottom:22px}h1{font-size:33px}.card{padding:20px}.stats{gap:10px;margin-bottom:20px}.stat{padding:15px}.stat-value{font-size:25px}.stat-label{font-size:11px}.stat-detail{font-size:10px}.form-grid{gap:12px}.top-actions .btn{font-size:12px;padding:9px 12px}.content-grid,.two-column{gap:18px}.toast-stack{bottom:93px;right:16px;max-width:calc(100vw - 32px)}.routine-controls{flex-wrap:wrap}.routine-controls select{flex-basis:100%}.inline-stats{gap:25px}.section-title p{font-size:13px}.tool-row{gap:13px}.tool-row .btn{flex-shrink:0}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">d</span>DayDesk</div>
+      <p class="tagline">Your day, in order.</p>
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav active" data-tab="today" aria-current="page"><span class="nav-icon" aria-hidden="true">◷</span><span class="nav-label">Today</span></button>
+        <button class="nav" data-tab="tasks"><span class="nav-icon" aria-hidden="true">✓</span><span class="nav-label">Tasks</span></button>
+        <button class="nav" data-tab="money"><span class="nav-icon" aria-hidden="true">$</span><span class="nav-label">Money</span></button>
+        <button class="nav" data-tab="work"><span class="nav-icon" aria-hidden="true">▤</span><span class="nav-label">Work</span></button>
+        <button class="nav" data-tab="settings"><span class="nav-icon" aria-hidden="true">⚙</span><span class="nav-label">Settings</span></button>
+      </nav>
+      <div class="sidebar-foot"><div class="local-mark"><span class="dot"></span>Private on this computer</div><p>Less juggling.<br>More room for your day.</p><button class="footer-link" id="sidebar-brief">Read today's brief ↗</button></div>
+    </aside>
+    <main class="main">
+      <div class="mobile-brand">DayDesk</div>
+      <header class="topbar">
+        <div><p class="eyebrow" id="date-label">Your daily workspace</p><h1 id="greeting">A clearer day.</h1><p class="subtitle" id="header-subtitle">Your priorities, schedule, and daily details in one place.</p></div>
+        <div class="top-actions"><button class="btn" id="read-brief">Read brief ↗</button><button class="btn primary" id="run-daily">Run daily routine <span aria-hidden="true">→</span></button></div>
+      </header>
+      <div class="status-strip" id="connection-status" role="status"><span class="dot"></span><span id="connection-text">Loading your workspace…</span></div>
+
+      <section class="section" id="section-today" aria-label="Today">
+        <div class="stats">
+          <div class="stat"><div class="stat-label">Tasks in focus <span aria-hidden="true">✓</span></div><div class="stat-value" id="stat-tasks">—</div><div class="stat-detail" id="stat-tasks-detail">Overdue, today, and undated</div></div>
+          <div class="stat"><div class="stat-label">On the calendar <span aria-hidden="true">◷</span></div><div class="stat-value" id="stat-events">—</div><div class="stat-detail" id="stat-events-detail">Events today</div></div>
+          <div class="stat"><div class="stat-label">Today's spending <span aria-hidden="true">$</span></div><div class="stat-value" id="stat-spend">—</div><div class="stat-detail">From the expenses you log</div></div>
+          <div class="stat"><div class="stat-label">Work this week <span aria-hidden="true">▤</span></div><div class="stat-value" id="stat-work">—</div><div class="stat-detail">Logs starting this week</div></div>
+        </div>
+        <div class="content-grid">
+          <div class="column">
+            <div class="card"><div class="card-head"><div><p class="eyebrow">Start here</p><h2>Your focus list</h2><p>Small steps, clear priorities.</p></div><button class="btn small" id="today-add-task">+ Add task</button></div><div id="focus-list"></div></div>
+            <div class="card"><div class="card-head"><div><h2>Your calendar</h2><p id="calendar-subtitle">Today's plans and the next event.</p></div><button class="btn small" id="add-event-button">+ Event</button></div><div id="calendar-list"></div></div>
+          </div>
+          <div class="column">
+            <div class="card routine"><p class="eyebrow">A useful starting point</p><h2>Make a checklist</h2><p>Turn a reusable routine into tasks. Choose a template and make it yours.</p><label class="sr-only" for="checklist-select">Checklist template</label><div class="routine-controls"><select id="checklist-select"><option value="">Choose a routine…</option></select><button class="btn primary" id="make-checklist">Add tasks</button></div><p class="hint" id="checklist-preview"></p></div>
+            <div class="card"><div class="card-head"><div><h2>Looking ahead</h2><p>Future deadlines on your radar.</p></div><span class="pill" id="upcoming-count">0 upcoming</span></div><div id="upcoming-list"></div></div>
+            <div class="card note-card"><p class="eyebrow">Keep it simple</p><h3>Your routine, your pace.</h3><p>Run your daily routine to save a brief and a backup. Browser reminders work while this page is open.</p><button class="btn small ghost" id="notification-button">Enable browser notifications</button><p class="hint" id="notification-note">Notifications are off until you choose to enable them.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="section-tasks" aria-label="Tasks" hidden>
+        <div class="section-title"><h2>A place for every task.</h2><p>Set a deadline when it matters. Keep the next step clear.</p></div>
+        <div class="two-column">
+          <div class="card"><div class="card-head"><h3>Your tasks</h3><div class="filters" aria-label="Task filters"><button class="filter active" data-filter="open" aria-pressed="true">Open</button><button class="filter" data-filter="all" aria-pressed="false">All</button><button class="filter" data-filter="done" aria-pressed="false">Done</button></div></div><div id="all-task-list"></div></div>
+          <div class="card"><div class="card-head"><h2>Add a task</h2></div><form id="task-form"><div class="form-grid">
+            <div class="field full"><label for="task-title">What's the next step?</label><input id="task-title" name="title" required maxlength="500" placeholder="e.g. Prepare tomorrow's event checklist"></div>
+            <div class="field"><label for="task-category">Category</label><select id="task-category" name="category" data-categories></select></div>
+            <div class="field"><label for="task-priority">Priority</label><select id="task-priority" name="priority"><option value="2">Normal</option><option value="1">High</option><option value="3">Low</option></select></div>
+            <div class="field full"><label for="task-due">Deadline <span class="hint">optional · your timezone</span></label><input id="task-due" name="due" type="datetime-local"></div>
+            <div class="field full"><label for="task-repeat">Repeat after completion</label><select id="task-repeat" name="recurrence"><option value="none">Doesn't repeat</option><option value="daily">Daily</option><option value="weekly">Weekly</option></select></div>
+            <div class="field full"><label for="task-notes">Notes <span class="hint">optional</span></label><textarea id="task-notes" name="notes" maxlength="5000" placeholder="Details, links, or something to remember"></textarea></div>
+          </div><div class="form-footer"><p>Repeating tasks need a deadline. It advances after completion.</p><button class="btn primary" type="submit">Add task</button></div></form></div>
+        </div>
+      </section>
+
+      <section class="section" id="section-money" aria-label="Money" hidden>
+        <div class="section-title"><h2>Know where it goes.</h2><p>A simple spending log, with totals from your own entries.</p></div>
+        <div class="two-column"><div class="card"><div class="inline-stats"><div><span>This month</span><strong id="money-month">$0.00</strong></div><div><span>Today</span><strong id="money-today">$0.00</strong></div><div><span>Entries</span><strong id="money-count">0</strong></div></div><div class="card-head"><h3>Recent expenses</h3></div><div id="expense-list"></div></div>
+          <div class="card"><div class="card-head"><h2>Log an expense</h2></div><form id="expense-form"><div class="form-grid"><div class="field"><label for="expense-amount">Amount ($)</label><input id="expense-amount" name="amount" required type="number" min="0.01" step="0.01" placeholder="0.00"></div><div class="field"><label for="expense-day">Date</label><input id="expense-day" name="day" type="date" required></div><div class="field full"><label for="expense-category">Category</label><input id="expense-category" name="category" required maxlength="100" placeholder="e.g. Groceries, Travel, Home"></div><div class="field full"><label for="expense-description">Description <span class="hint">optional</span></label><input id="expense-description" name="description" maxlength="2000" placeholder="What was it for?"></div></div><div class="form-footer"><p>Amounts are recorded in USD.</p><button class="btn primary" type="submit">Save expense</button></div></form></div>
+        </div>
+      </section>
+
+      <section class="section" id="section-work" aria-label="Work" hidden>
+        <div class="section-title"><h2>Give your time a record.</h2><p>Track shifts, work hours, estimated pay, and mileage.</p></div>
+        <div class="two-column"><div class="card"><div class="inline-stats"><div><span>Hours this week</span><strong id="work-hours">0</strong></div><div><span>Estimated pay this week</span><strong id="work-pay">$0.00</strong></div><div><span>Miles this week</span><strong id="work-miles">0</strong></div></div><div class="card-head"><h3>Work log</h3></div><div id="work-list"></div><p class="hint">Weekly totals include logs starting this week. Pay estimates use your hourly rate, before taxes. Mileage is recorded separately.</p></div>
+          <div class="card"><div class="card-head"><h2>Log your time</h2></div><form id="work-form"><div class="form-grid"><div class="field full"><label for="work-role">Role or activity</label><input id="work-role" name="role" required maxlength="200" placeholder="e.g. Example shift"></div><div class="field full"><label for="work-start">Start <span class="hint">your timezone</span></label><input id="work-start" name="start" type="datetime-local" required></div><div class="field full"><label for="work-end">End <span class="hint">your timezone</span></label><input id="work-end" name="end" type="datetime-local" required></div><div class="field"><label for="work-rate">Hourly rate ($)</label><input id="work-rate" name="rate" type="number" min="0" step="0.01" value="0" required></div><div class="field"><label for="work-mileage">Miles</label><input id="work-mileage" name="miles" type="number" min="0" step="0.1" value="0" required></div><div class="field full"><label for="work-notes">Notes <span class="hint">optional</span></label><textarea id="work-notes" name="notes" maxlength="5000" placeholder="What you worked on"></textarea></div></div><div class="form-footer"><p>Use an hourly rate of zero for unpaid hours.</p><button class="btn primary" type="submit">Save work log</button></div></form></div>
+        </div>
+      </section>
+
+      <section class="section" id="section-settings" aria-label="Settings" hidden>
+        <div class="section-title"><h2>Make it fit your day.</h2><p>Your preferences and a few practical tools.</p></div>
+        <div class="two-column"><div class="card"><div class="card-head"><h2>Your preferences</h2></div><form id="config-form"><div class="form-grid"><div class="field full"><label for="config-name">Name</label><input id="config-name" name="name" required maxlength="100"></div><div class="field full"><label for="config-timezone">Timezone</label><input id="config-timezone" name="timezone" required placeholder="UTC"><p class="hint">Use a timezone name such as UTC or Europe/London.</p></div><div class="field full"><label for="config-time">Daily routine time</label><input id="config-time" name="brief_time" required type="time"><p class="hint">Used by the scheduler when you start it with: python3 -m daydesk watch. Saving a time here does not start background runs.</p></div><div class="field full"><label for="config-categories">Task categories</label><input id="config-categories" name="categories" required placeholder="Work, Home, Projects, Personal"><p class="hint">Separate categories with commas.</p></div></div><div class="form-footer"><p id="timezone-note">Dates use your selected timezone.</p><button class="btn primary" type="submit">Save preferences</button></div></form></div>
+          <div class="settings-stack"><div class="card"><div class="card-head"><h2>Your data tools</h2></div><div class="tool-row"><div><h3>Save a backup</h3><p>Create a restore point for your entries and preferences.</p></div><button class="btn small" id="backup-button">Back up</button></div><div class="tool-row"><div><h3>Export your records</h3><p>Save CSV files to use in Excel or another app.</p></div><button class="btn small" id="export-button">Export CSV</button></div><div class="tool-row"><div><h3>Browser reminders</h3><p>Get task and event reminders while this dashboard is open.</p></div><button class="btn small" id="settings-notifications">Enable</button></div></div><div class="card note-card"><h3>A workspace that stays local.</h3><p>DayDesk keeps your entries on this computer. Your daily brief uses the tasks and plans you add.</p><p>Keep your dashboard running for browser reminders. Use the repository's scheduling guide for daily background runs.</p></div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="event-dialog"><div class="dialog-head"><h2>Add a calendar event</h2><button class="btn small" id="close-event" aria-label="Close event form">×</button></div><form id="event-form"><div class="form-grid"><div class="field full"><label for="event-title">Event title</label><input id="event-title" name="title" required maxlength="500" placeholder="e.g. Meeting, appointment, or event setup"></div><div class="field"><label for="event-start">Start <span class="hint">your timezone</span></label><input id="event-start" name="start" type="datetime-local" required></div><div class="field"><label for="event-end">End <span class="hint">your timezone</span></label><input id="event-end" name="end" type="datetime-local" required></div><div class="field full"><label for="event-location">Location <span class="hint">optional</span></label><input id="event-location" name="location" maxlength="1000"></div><div class="field full"><label for="event-category">Category</label><select id="event-category" name="category" data-categories></select></div></div><div class="form-footer"><p>Calendar entries are personal plans. They do not send invitations.</p><button class="btn primary" type="submit">Add event</button></div></form></dialog>
+  <dialog id="brief-dialog"><div class="dialog-head"><h2>Your daily brief</h2><button class="btn small" id="close-brief" aria-label="Close daily brief">×</button></div><pre class="brief-content" id="brief-content"></pre></dialog>
+  <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="false"></div>
+
+  <script nonce="__CSP_NONCE__">
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const csrf = document.querySelector('meta[name="csrf-token"]').content;
+    let state = null, filter = 'open', activeTab = 'today', refreshInFlight = false;
+    let notificationsEnabled = false;
+    const reminded = new Set();
+    try { notificationsEnabled = localStorage.getItem('daydesk-notifications') === 'yes'; } catch (_) {}
+
+    function el(tag, className, content) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (content !== undefined) node.textContent = String(content);
+      return node;
+    }
+    function toast(message, error = false, persistent = false) {
+      const item = el('div', error ? 'toast error' : 'toast');
+      item.append(el('span', '', message));
+      const close = el('button', '', '×'); close.setAttribute('aria-label','Dismiss notification');
+      close.addEventListener('click', () => item.remove()); item.append(close); $('toast-stack').append(item);
+      if (!persistent) setTimeout(() => item.remove(), error ? 10000 : 6500);
+    }
+    async function api(path, payload) {
+      const options = {cache:'no-store'};
+      if (payload !== undefined) Object.assign(options,{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':csrf},body:JSON.stringify(payload)});
+      let response;
+      try { response = await fetch(path, options); } catch (_) { throw new Error('Cannot reach DayDesk. Keep the dashboard server running, then reload.'); }
+      let data;
+      try { data = await response.json(); } catch (_) { throw new Error('DayDesk returned an unreadable response. Reload and try again.'); }
+      if (!response.ok || data.ok === false) throw new Error(data.error || 'The action could not be completed.');
+      return data;
+    }
+    function timezone() { return state?.config?.timezone || 'UTC'; }
+    function parsed(value) { const date = value ? new Date(value) : null; return date && Number.isFinite(date.getTime()) ? date : null; }
+    function localDay(value) {
+      const date = parsed(value); if (!date) return '';
+      const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:timezone(),year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).map(part => [part.type,part.value]));
+      return parts.year+'-'+parts.month+'-'+parts.day;
+    }
+    function clockParts(value) { return Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:timezone(),hourCycle:'h23',hour:'2-digit',minute:'2-digit',second:'2-digit'}).formatToParts(parsed(value)).map(part => [part.type,part.value])); }
+    function localInput(value) { if(!parsed(value))return '';const parts=clockParts(value);return localDay(value)+'T'+parts.hour+':'+parts.minute; }
+    function eventTouchesToday(event) {
+      const end=parsed(event.end);if(!end || localDay(event.start)>state.today || localDay(event.end)<state.today)return false;
+      if(localDay(event.end)>state.today)return true;
+      const parts=clockParts(event.end);return parts.hour!=='00'||parts.minute!=='00'||parts.second!=='00'||end.getMilliseconds()>0;
+    }
+    function displayTime(value) { const date = parsed(value); return date ? new Intl.DateTimeFormat('en-US',{timeZone:timezone(),hour:'numeric',minute:'2-digit'}).format(date) : 'No time set'; }
+    function displayDate(value, withTime = false) {
+      const date = parsed(value); if (!date) return 'No deadline';
+      const options = {timeZone:timezone(),month:'short',day:'numeric'};
+      if (withTime) Object.assign(options,{hour:'numeric',minute:'2-digit'});
+      return new Intl.DateTimeFormat('en-US',options).format(date);
+    }
+    const money = cents => new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format((Number(cents)||0)/100);
+    const number = value => new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(Number(value)||0);
+    function now() { return new Date(); }
+    function isCompleted(task) { return task.completed === true; }
+    function isOverdue(task) { return !isCompleted(task) && parsed(task.due) && parsed(task.due) < now(); }
+    function taskOrder(a,b) { return (isOverdue(b) ? 1 : 0) - (isOverdue(a) ? 1 : 0) || Number(a.priority)-Number(b.priority) || (parsed(a.due)?.getTime() ?? Infinity)-(parsed(b.due)?.getTime() ?? Infinity) || String(a.created_at).localeCompare(String(b.created_at)); }
+    function focusTasks() { return (state.tasks || []).filter(t => !isCompleted(t) && (!t.due || isOverdue(t) || localDay(t.due) === state.today)).sort(taskOrder); }
+    function weekStart() { const anchor = new Date(state.today+'T12:00:00Z'); const weekday = (anchor.getUTCDay()+6)%7; anchor.setUTCDate(anchor.getUTCDate()-weekday); return anchor.toISOString().slice(0,10); }
+    function workWeek() { const start = weekStart(); return (state.work_logs || []).filter(row => {const day=localDay(row.start); return day >= start && day <= state.today;}); }
+    function empty(target, title, detail, actionLabel, action) {
+      const box = el('div','empty'); box.append(el('div','empty-symbol','◌'),el('strong','',title),el('p','',detail));
+      if (action) { const button = el('button','btn small',actionLabel); button.addEventListener('click',action); box.append(button); }
+      target.replaceChildren(box);
+    }
+    function setTab(tab) {
+      activeTab=tab;
+      document.querySelectorAll('.section').forEach(section => section.hidden=section.id!=='section-'+tab);
+      document.querySelectorAll('.nav').forEach(button => {const selected=button.dataset.tab===tab;button.classList.toggle('active',selected);if(selected)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});
+      if(tab==='tasks')$('task-title').focus({preventScroll:true});
+    }
+    function deleteButton(kind,record) {
+      const button=el('button','text-action danger','Delete');button.setAttribute('aria-label','Delete '+(record.title||record.role||record.description||record.category||'record'));
+      button.addEventListener('click',()=>{if(!confirm('Delete this entry permanently?\n\n'+(record.title||record.role||record.description||record.category||'')))return;action(button,async()=>{await api('/api/'+kind+'/'+record.id+'/delete',{});await refresh();toast('Entry deleted.');});});return button;
+    }
+    function rescheduleButton(task) {
+      const button=el('button','text-action','Reschedule');button.setAttribute('aria-label','Reschedule '+task.title);
+      button.addEventListener('click',()=>{const due=prompt('New deadline in '+timezone()+': YYYY-MM-DDTHH:MM. Leave blank to clear a non-repeating deadline.',localInput(task.due));if(due===null)return;action(button,async()=>{await api('/api/tasks/'+task.id+'/edit',{due:due.trim()||null});await refresh();toast('Task deadline updated.');});});return button;
+    }
+    function renderTask(task) {
+      const row = el('div',isCompleted(task)?'task-row completed':'task-row');
+      const check = el('input','check');check.type='checkbox';check.checked=isCompleted(task);check.disabled=isCompleted(task);check.setAttribute('aria-label','Complete task: '+task.title);
+      check.addEventListener('change',async () => {check.disabled=true;try {await api('/api/tasks/'+encodeURIComponent(task.id)+'/complete',{});await refresh();toast(task.recurrence && task.recurrence!=='none'?'Task completed. Its next occurrence is ready.':'Task completed.');} catch(error){check.checked=false;check.disabled=false;toast(error.message,true);}});
+      const main=el('div','task-main');main.append(el('div','task-title',task.title));
+      const meta=el('div','task-meta');meta.append(el('span','pill',task.category||'Personal'));
+      const deadline=task.due?(localDay(task.due)===state.today?'Today, '+displayTime(task.due):displayDate(task.due,true)):'No deadline';
+      meta.append(el('span',isOverdue(task)?'pill urgent':'',isOverdue(task)?'Overdue · '+deadline:deadline));
+      if(Number(task.priority)===1)meta.append(el('span','pill urgent','High priority'));
+      if(task.recurrence && task.recurrence!=='none')meta.append(el('span','',task.recurrence+' repeat'));
+      if(isCompleted(task))meta.append(el('span','pill done','Done'));
+      main.append(meta);if(task.notes)main.append(el('p','task-notes',task.notes));const actions=el('div','record-actions');if(!isCompleted(task))actions.append(rescheduleButton(task));actions.append(deleteButton('tasks',task));main.append(actions);row.append(check,main);return row;
+    }
+    function renderTasks(target, tasks, emptyTitle, emptyDetail) {
+      if(!tasks.length){empty(target,emptyTitle,emptyDetail);return;} target.replaceChildren(...tasks.map(renderTask));
+    }
+    function renderCalendar() {
+      const list=$('calendar-list');const sorted=(state.events||[]).slice().sort((a,b)=>new Date(a.start)-new Date(b.start));
+      const todayEvents=sorted.filter(eventTouchesToday);
+      const next=sorted.find(event=>localDay(event.start)>state.today);
+      const selected=next?[...todayEvents,next]:todayEvents;
+      if(!selected.length){empty(list,'Your calendar has room.','Add classes, shifts, games, or plans to see them here.','Add an event',()=>showEvent());return;}
+      list.replaceChildren(...selected.map(event=>{
+        const start=parsed(event.start);const soon=start && start>=now() && start-now()<=900000;
+        const node=el('div',soon?'calendar-item soon':'calendar-item');
+        let timing=localDay(event.start)===state.today?displayTime(event.start):displayDate(event.start,true);
+        timing+=' – '+(localDay(event.end)===localDay(event.start)?displayTime(event.end):displayDate(event.end,true));
+        if(next?.id===event.id)timing='Next up · '+timing;
+        node.append(el('div','event-time',timing),el('div','event-title',event.title));
+        if(event.location)node.append(el('div','event-location',event.location));const actions=el('div','record-actions');actions.append(deleteButton('events',event));node.append(actions);return node;
+      }));
+    }
+    function renderTable(target, headers, rows) {
+      const wrap=el('div','table-wrap'),table=el('table'),head=el('thead'),tr=el('tr');
+      headers.forEach((heading,i)=>tr.append(el('th',i===headers.length-1?'amount':'',heading)));head.append(tr);table.append(head);
+      const body=el('tbody');rows.forEach(cells=>{const row=el('tr');cells.forEach((cell,i)=>{const td=el('td',i===cells.length-1?'amount':'');if(cell instanceof Node)td.append(cell);else td.textContent=String(cell);row.append(td);});body.append(row);});table.append(body);wrap.append(table);target.replaceChildren(wrap);
+    }
+    function renderMoney() {
+      const expenses=state.expenses||[];const today=expenses.filter(row=>row.date===state.today);const month=expenses.filter(row=>String(row.date).slice(0,7)===state.today.slice(0,7));
+      $('stat-spend').textContent=money(today.reduce((sum,row)=>sum+Number(row.amount_cents||0),0));
+      $('money-today').textContent=$('stat-spend').textContent;$('money-month').textContent=money(month.reduce((sum,row)=>sum+Number(row.amount_cents||0),0));$('money-count').textContent=expenses.length;
+      if(!expenses.length){empty($('expense-list'),'No expenses logged yet.','Add an expense to start seeing your spending.');return;}
+      renderTable($('expense-list'),['Date','Expense','Amount',''],expenses.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))||String(b.created_at).localeCompare(String(a.created_at))).map(row=>{const detail=el('div','',row.category);if(row.description)detail.append(el('small','',row.description));return [row.date,detail,money(row.amount_cents),deleteButton('expenses',row)];}));
+    }
+    function renderWork() {
+      const week=workWeek();const hours=week.reduce((sum,row)=>sum+Number(row.duration_minutes||0),0)/60;
+      $('stat-work').textContent=number(hours)+'h';$('work-hours').textContent=number(hours);$('work-pay').textContent=money(week.reduce((sum,row)=>sum+Number(row.pay_cents||0),0));$('work-miles').textContent=number(week.reduce((sum,row)=>sum+Number(row.miles||0),0));
+      const rows=(state.work_logs||[]).slice().sort((a,b)=>new Date(b.start)-new Date(a.start));
+      if(!rows.length){empty($('work-list'),'Your time matters.','Log a shift or work session to build a useful record.');return;}
+      renderTable($('work-list'),['Work','Hours / miles','Est. pay',''],rows.map(row=>{const detail=el('div','',row.role);detail.append(el('small','',displayDate(row.start)+' · '+displayTime(row.start)+' – '+displayTime(row.end)));if(row.notes)detail.append(el('small','',row.notes));const amounts=el('div','',number(Number(row.duration_minutes||0)/60)+'h');amounts.append(el('small','',number(row.miles)+' mi'));return [detail,amounts,money(row.pay_cents),deleteButton('work_logs',row)];}));
+    }
+    function renderSettings() {
+      const config=state.config||{};
+      const values={'config-name':config.name||'','config-timezone':config.timezone||'UTC','config-time':config.brief_time||'07:00','config-categories':(config.categories||['Work','Home','Projects','Personal']).join(', ')};
+      Object.entries(values).forEach(([id,value])=>{if(document.activeElement!==$(id) && !$('config-form').dataset.dirty)$(id).value=value;});
+      $('timezone-note').textContent='All dates use '+timezone()+'.';
+      document.querySelectorAll('[data-categories]').forEach(select=>{
+        const old=select.value;const categories=Array.isArray(config.categories) && config.categories.length?config.categories:['Work','Home','Projects','Personal'];
+        select.replaceChildren(...categories.map(name=>{const option=el('option','',name);option.value=name;return option;}));if(categories.includes(old))select.value=old;
+      });
+      const templates=state.templates||{};const select=$('checklist-select');const previous=select.value;
+      const placeholder=el('option','','Choose a routine…');placeholder.value='';select.replaceChildren(placeholder,...Object.keys(templates).map(name=>{const option=el('option','',name.replaceAll('_',' ').replaceAll('-',' '));option.value=name;return option;}));if(templates[previous])select.value=previous;checklistPreview();
+      if(!$('expense-day').value)$('expense-day').value=state.today;
+    }
+    function checklistPreview() {
+      const template=state?.templates?.[$('checklist-select').value];
+      const count=Array.isArray(template)?template.length:Array.isArray(template?.tasks)?template.tasks.length:null;
+      $('checklist-preview').textContent=template?(count===null?'A reusable starting point. Review the tasks after adding.':count+' tasks will be added to your focus list.'):'Templates are suggestions. Add only what you need.';
+    }
+    function render() {
+      const focus=focusTasks();$('stat-tasks').textContent=focus.length;
+      const overdue=(state.tasks||[]).filter(isOverdue).length;$('stat-tasks-detail').textContent=overdue?overdue+' overdue · sorted by priority':'Overdue, today, and undated';
+      const events=(state.events||[]).filter(eventTouchesToday);$('stat-events').textContent=events.length;
+      const next=events.find(event=>parsed(event.start)>now());$('stat-events-detail').textContent=next?'Next at '+displayTime(next.start):'Events today';
+      renderTasks($('focus-list'),focus,'A fresh page for your day.','Add a task or choose a checklist. Your focus list will take shape here.');
+      const all=(state.tasks||[]).filter(task=>filter==='all'||(filter==='done'?isCompleted(task):!isCompleted(task))).slice().sort(taskOrder);renderTasks($('all-task-list'),all,filter==='done'?'Your finished tasks will land here.':'No tasks here yet.','Add the next thing you want to get done.');
+      const upcoming=(state.tasks||[]).filter(task=>!isCompleted(task)&&task.due&&localDay(task.due)>state.today).sort((a,b)=>new Date(a.due)-new Date(b.due));
+      $('upcoming-count').textContent=upcoming.length+' upcoming';renderTasks($('upcoming-list'),upcoming.slice(0,4),'No future deadlines yet.','Set a deadline on a task and see it here.');
+      renderCalendar();renderMoney();renderWork();renderSettings();
+      const name=String(state.config?.name||'').trim().split(/\s+/)[0];$('greeting').textContent='A clearer day'+(name?', '+name: '')+'.';
+      const date=parsed(state.now)||now();$('date-label').textContent=new Intl.DateTimeFormat('en-US',{timeZone:timezone(),weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(date);
+      $('header-subtitle').textContent=focus.length?'You have '+focus.length+' '+(focus.length===1?'task':'tasks')+' in focus. One step at a time.':'Your priorities, schedule, and daily details in one place.';
+      updateNotificationButtons();
+    }
+    async function refresh() {
+      if(refreshInFlight)return;refreshInFlight=true;
+      try {state=await api('/api/state');render();$('connection-status').classList.remove('error');$('connection-text').textContent='Up to date · '+timezone()+' · reminders checked every minute';checkReminders();}
+      catch(error){$('connection-status').classList.add('error');$('connection-text').textContent=error.message;throw error;}
+      finally {refreshInFlight=false;}
+    }
+    async function action(button, callback) {button.disabled=true;try{await callback();}catch(error){toast(error.message,true);}finally{button.disabled=false;}}
+    function formPayload(form) {return Object.fromEntries(new FormData(form));}
+    function bindForm(id,path,transform,success) {
+      const form=$(id);form.addEventListener('submit',event=>{event.preventDefault();const button=form.querySelector('button[type="submit"]');action(button,async()=>{const payload=transform(formPayload(form));await api(path,payload);if(id==='config-form')delete form.dataset.dirty;else form.reset();if(id==='task-form')$('task-due').required=false;if(id==='event-form')$('event-dialog').close();await refresh();toast(success);});});
+    }
+    function showEvent() {$('event-dialog').showModal();$('event-title').focus();}
+    async function readBrief() {await action($('read-brief'),async()=>{const result=await api('/api/brief');$('brief-content').textContent=result.markdown;$('brief-dialog').showModal();});}
+    function updateNotificationButtons() {
+      const available='Notification' in window;
+      const enabled=available && notificationsEnabled && Notification.permission==='granted';
+      const label=enabled?'Disable browser notifications':'Enable browser notifications';$('notification-button').textContent=label;$('settings-notifications').textContent=enabled?'Disable':'Enable';
+      $('notification-note').textContent=!available?'This browser does not support notifications. In-page reminders still work.':enabled?'Notifications are on for this dashboard while it is open.':Notification.permission==='denied'?'Notifications are blocked in your browser settings. In-page reminders still work.':'Notifications are off until you choose to enable them.';
+      $('notification-button').disabled=!available;$('settings-notifications').disabled=!available;
+    }
+    async function toggleNotifications() {
+      if(!('Notification' in window)){toast('This browser does not support notifications.',true);return;}
+      try {
+        if(notificationsEnabled && Notification.permission==='granted')notificationsEnabled=false;
+        else {const permission=await Notification.requestPermission();notificationsEnabled=permission==='granted';if(!notificationsEnabled)toast('Browser notifications are not enabled. In-page reminders remain available.');}
+        try{localStorage.setItem('daydesk-notifications',notificationsEnabled?'yes':'no');}catch(_){}
+        updateNotificationButtons();if(notificationsEnabled)toast('Notifications enabled while this dashboard is open.');
+      }catch(error){toast('Your browser could not enable notifications. Check its site settings.',true);}
+    }
+    function remind(key,title,message) {
+      if(reminded.has(key))return;reminded.add(key);toast(message,false,true);
+      if(notificationsEnabled && 'Notification' in window && Notification.permission==='granted'){
+        try{new Notification(title,{body:message,tag:'daydesk-'+key});}catch(_){}
+      }
+    }
+    function checkReminders() {
+      if(!state)return;const time=now().getTime();
+      (state.tasks||[]).filter(task=>!isCompleted(task)&&task.due).forEach(task=>{const delta=parsed(task.due)?.getTime()-time;if(delta>=0&&delta<=900000)remind('task-'+task.id+'-'+task.due,'Task deadline soon',task.title+' is due at '+displayTime(task.due)+'.');});
+      (state.events||[]).forEach(event=>{const delta=parsed(event.start)?.getTime()-time;if(delta>=0&&delta<=900000)remind('event-'+event.id+'-'+event.start,'Upcoming event',event.title+' starts at '+displayTime(event.start)+(event.location?' · '+event.location:'')+'.');});
+    }
+
+    document.querySelectorAll('.nav').forEach(button=>button.addEventListener('click',()=>setTab(button.dataset.tab)));
+    document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(other=>{const selected=other===button;other.classList.toggle('active',selected);other.setAttribute('aria-pressed',String(selected));});if(state)render();}));
+    $('today-add-task').addEventListener('click',()=>setTab('tasks'));$('add-event-button').addEventListener('click',showEvent);$('close-event').addEventListener('click',()=>$('event-dialog').close());$('close-brief').addEventListener('click',()=>$('brief-dialog').close());
+    $('read-brief').addEventListener('click',readBrief);$('sidebar-brief').addEventListener('click',readBrief);
+    $('run-daily').addEventListener('click',()=>action($('run-daily'),async()=>{const data=await api('/api/run',{});await refresh();toast('Daily routine complete. Your brief is updated and today’s backup is saved.');await readBrief();}));
+    $('make-checklist').addEventListener('click',()=>action($('make-checklist'),async()=>{const name=$('checklist-select').value;if(!name)throw new Error('Choose a checklist first.');await api('/api/checklists',{name});await refresh();toast('Checklist tasks added. Review them in your focus list.');}));
+    $('checklist-select').addEventListener('change',checklistPreview);
+    $('backup-button').addEventListener('click',()=>action($('backup-button'),async()=>{const data=await api('/api/backup',{});toast('Backup saved: '+(typeof data.result==='string'?data.result:JSON.stringify(data.result)),false,true);}));
+    $('export-button').addEventListener('click',()=>action($('export-button'),async()=>{const data=await api('/api/export',{});toast('CSV files saved: '+(typeof data.result==='string'?data.result:JSON.stringify(data.result)),false,true);}));
+    $('notification-button').addEventListener('click',toggleNotifications);$('settings-notifications').addEventListener('click',toggleNotifications);
+    $('config-form').addEventListener('input',()=>$('config-form').dataset.dirty='yes');
+    $('task-repeat').addEventListener('change',()=>{$('task-due').required=$('task-repeat').value!=='none';});
+    bindForm('task-form','/api/tasks',data=>({...data,priority:Number(data.priority),due:data.due||null}),'Task added.');
+    bindForm('event-form','/api/events',data=>data,'Event added to your calendar.');
+    bindForm('expense-form','/api/expenses',data=>data,'Expense saved.');
+    bindForm('work-form','/api/work',data=>({...data,miles:Number(data.miles)}),'Work session saved.');
+    bindForm('config-form','/api/config',data=>({...data,categories:data.categories.split(',').map(value=>value.trim()).filter(Boolean)}),'Preferences saved.');
+    refresh().catch(error=>toast(error.message,true));
+    setInterval(()=>refresh().catch(()=>{}),60000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh().catch(()=>{});});
+  </script>
+</body>
+</html>

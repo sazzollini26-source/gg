@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "daydesk-assistant"
+version = "1.0.0"
+description = "A local daily dashboard and automation assistant for tasks, events, work, and everyday routines."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+windows = ["tzdata>=2025.1"]
+
+[project.scripts]
+daydesk = "daydesk.cli:main"
+
+[tool.setuptools.package-data]
+daydesk = ["static/*.html"]
+
+[tool.setuptools.packages.find]
+include = ["daydesk*"]
